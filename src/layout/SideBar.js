@@ -51,7 +51,7 @@ const SideBar = () => {
               All Songs
             </NavLink>
             <NavLink className='collapse-item' href='/add-song'>
-              Add Songs
+              Add Song
             </NavLink>
           </div>
         </div>
