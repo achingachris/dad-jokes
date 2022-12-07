@@ -1,8 +1,12 @@
-import React from 'react'
+import PageHeader from '../components/shared/PageHeader'
+import BookingsTable from '../components/bookings/BookingsTable'
 
 const Bookings = () => {
   return (
-    <div>Bookings</div>
+    <div>
+      <PageHeader pageName='My Bookings' />
+      <BookingsTable />
+    </div>
   )
 }
 
