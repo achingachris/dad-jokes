@@ -50,7 +50,7 @@ const SideBar = () => {
             <NavLink className='collapse-item' to='/songs'>
               All Songs
             </NavLink>
-            <NavLink className='collapse-item' href='/add-song'>
+            <NavLink className='collapse-item' to='/add-song'>
               Add Song
             </NavLink>
           </div>
