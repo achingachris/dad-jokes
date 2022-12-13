@@ -1,13 +1,17 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#id_work_days input[type='checkbox'] {
+  display: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#id_work_days span {
+  display: inline-block;
+  padding: 10px;
+  text-transform: uppercase;
+  border: 2px solid #0061f2;
+  border-radius: 3px;
+  color: #0061f2;
+}
+
+#id_work_days input[type='checkbox']:checked + span {
+  background-color: #00ac69;
+  color: black;
 }
