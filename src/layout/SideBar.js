@@ -32,15 +32,15 @@ const SideBar = () => {
           className='nav-link collapsed'
           href='/'
           data-toggle='collapse'
-          data-target='#collapseTwo'
+          data-target='#songsCollapse'
           aria-expanded='true'
-          aria-controls='collapseTwo'
+          aria-controls='songsCollapse'
         >
           <i className='fas fa-fw fa-cog' />
           <span>Songs</span>
         </a>
         <div
-          id='collapseTwo'
+          id='songsCollapse'
           className='collapse'
           aria-labelledby='headingTwo'
           data-parent='#accordionSidebar'
@@ -62,15 +62,15 @@ const SideBar = () => {
           className='nav-link collapsed'
           href='/'
           data-toggle='collapse'
-          data-target='#collapseUtilities'
+          data-target='#eventsCollapse'
           aria-expanded='true'
-          aria-controls='collapseUtilities'
+          aria-controls='eventsCollapse'
         >
           <i className='fas fa-fw fa-wrench' />
           <span>Events</span>
         </a>
         <div
-          id='collapseUtilities'
+          id='eventsCollapse'
           className='collapse'
           aria-labelledby='headingUtilities'
           data-parent='#accordionSidebar'
@@ -92,15 +92,15 @@ const SideBar = () => {
           className='nav-link collapsed'
           href='/'
           data-toggle='collapse'
-          data-target='#collapseUtilities'
+          data-target='#bookingCollapse'
           aria-expanded='true'
-          aria-controls='collapseUtilities'
+          aria-controls='bookingCollapse'
         >
           <i className='fas fa-fw fa-wrench' />
           <span>Bookings</span>
         </a>
         <div
-          id='collapseUtilities'
+          id='bookingCollapse'
           className='collapse'
           aria-labelledby='headingUtilities'
           data-parent='#accordionSidebar'

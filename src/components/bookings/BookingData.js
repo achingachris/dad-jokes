@@ -1,9 +1,10 @@
-const BookingData = () => {
+const BookingData = ({ name, description, email }) => {
   return (
     <tr>
-      <td>Private Function</td>
-      <td>11/11/2021</td>
-      <td>Ruchmond Flair</td>
+      <td>{name}</td>
+      <td>{email}</td>
+      <td>{description}</td>
+      <td>Date</td>
       <td>
         <a href='/'>View</a>
       </td>
@@ -12,3 +13,9 @@ const BookingData = () => {
 }
 
 export default BookingData
+
+BookingData.defaultProps = {
+  name: 'Booking Title',
+  description: 'Booking Description',
+  email: 'client@mail.com',
+}
