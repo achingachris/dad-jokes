@@ -3,16 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-  
 export class JokesService {
+  url = 'https://icanhazdadjoke.com';
 
-  url = 'https://icanhazdadjoke.com'
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getJoke(): Observable<any> {
-    return this.http.get(this.url, {headers: {Accept: 'application/json'}})
+    return this.http.get(this.url, { headers: { Accept: 'application/json' } });
   }
 }
