@@ -12,7 +12,10 @@
 
 <div class="container mx-auto text-center">
   <h3 class="mb-4 text-3xl font-bold">Don't Laugh Challenge</h3>
-  <div id="joke" class="mb-4 rounded-lg bg-gray-200 p-4">{{ joke }}</div>
+  <div id="joke" class="joke mb-4 rounded-lg bg-gray-200 p-4">
+    <span class="joke-label">{{ joke }}</span>
+    <button class="joke-btn" (click)="copyJoke(joke)"> {{ jokeCopied ? "Copied" : "Copy" }} </button>
+  </div>
   <button
     id="jokeBtn"
     class="rounded-lg bg-blue-500 px-4 py-2 text-white"
