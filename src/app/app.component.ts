@@ -7,7 +7,7 @@ import { JokesService } from './jokes.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  joke: string = '';
+  joke = 'Click the Button to Generate a Joke';
 
   title = 'Dad jokes';
 
