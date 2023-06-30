@@ -1,65 +1,81 @@
-<div class="container">
-  <!-- Navbar -->
-  <nav class="navbar bg-body-tertiary fixed-top mb-5">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Dad Jokes</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div
-        class="offcanvas offcanvas-end"
-        tabindex="-1"
-        id="offcanvasNavbar"
-        aria-labelledby="offcanvasNavbarLabel"
-      >
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Extras</h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
+<div class="container-fluid">
+  <div class="container mt-5 py-4">
+    <!-- Navbar -->
+    <nav class="navbar bg-body-tertiary fixed-top mb-5">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Dad Jokes</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Extras</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="https://github.com/achingachris/dad-jokes-angular"
+                  >GitHub Repo</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.chrisdevcode.xyz/"
+                  >About Chris</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="https://github.com/achingachris/dad-jokes-angular"
-                >GitHub Repo</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.chrisdevcode.xyz/"
-                >About Chris</a
-              >
-            </li>
-          </ul>
+      </div>
+    </nav>
+
+    <!-- content -->
+    <div class="container mt-5 text-center">
+      <h4 class="mt-5 display-3 font-weight-bold">Don't Laugh Challenge</h4>
+      <div id="joke" class="mb-4 rounded-lg p-4">{{ joke }}</div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <button
+              id="jokeBtn"
+              class="btn rounded-lg bg-primary text-white"
+              (click)="fetchJoke()"
+            >
+              Get Another Joke
+            </button>
+          </div>
+          <div class="col">
+            <button
+              id="jokeBtn"
+              class="btn rounded-lg bg-success text-white"
+              (click)="copyJoke(joke)"
+            >
+              {{ jokeCopied ? "Copied" : "Copy Joke" }}
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </nav>
-
-  <!-- content -->
-  <div class="container mt-5 text-center">
-    <h3 class="mt-5 display-3 font-weight-bold">Don't Laugh Challenge</h3>
-    <div id="joke" class="mb-4 rounded-lg p-4">{{ joke }}</div>
-    <button
-      id="jokeBtn"
-      class="btn rounded-lg bg-primary px-4 py-2 text-white"
-      (click)="fetchJoke()"
-    >
-      Get Another Joke
-    </button>
   </div>
-  
 </div>
