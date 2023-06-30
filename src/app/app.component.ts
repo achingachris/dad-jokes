@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { JokesService } from './jokes.service';
-import { pwa } from 'pwafire';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +7,8 @@ import { pwa } from 'pwafire';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  joke = 'Click the Button to Generate a Joke';
-  jokeCopied = false;
+  joke: string = '';
+
   title = 'Dad jokes';
 
   constructor(private jokeService: JokesService) {}
@@ -18,15 +17,5 @@ export class AppComponent {
     this.jokeService.getJoke().subscribe((data: any) => {
       this.joke = data.joke;
     });
-  }
-
-  async copyJoke(joke: string) {
-    try {
-      const res = await pwa.copyText(joke);
-      this.jokeCopied = res.ok;
-      setTimeout(() => (this.jokeCopied = false), 5000);
-    } catch (error) {
-      console.log(error);
-    }
   }
 }
