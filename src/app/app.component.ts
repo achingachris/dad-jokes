@@ -7,6 +7,7 @@ import { pwa } from 'pwafire';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
+  
 export class AppComponent {
   joke = 'Click the Button to Generate a Joke';
   jokeCopied = false;
@@ -30,19 +31,17 @@ export class AppComponent {
     }
   }
 
-  // async shareJoke() {
-  //   const shareOptions: pwa.ShareOptions = {
-  //     title: 'Check out this joke!',
-  //     text: this.joke,
-  //     url: 'https://www.linkedin.com/in/chrisachinga/'
-  //   };
-  //
-  //   try {
-  //     await pwa.Share(shareOptions);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
+  async shareJoke() {
+    const shareOptions = {
+      title: 'Check out this joke!',
+      text: this.joke,
+      url: 'https://www.linkedin.com/in/chrisachinga/',
+    };
 
-
+    try {
+      await pwa.Share(shareOptions);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
