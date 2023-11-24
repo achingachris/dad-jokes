@@ -29,4 +29,20 @@ export class AppComponent {
       console.log(error);
     }
   }
+
+  // async shareJoke() {
+  //   const shareOptions: pwa.ShareOptions = {
+  //     title: 'Check out this joke!',
+  //     text: this.joke,
+  //     url: 'https://www.linkedin.com/in/chrisachinga/'
+  //   };
+  //
+  //   try {
+  //     await pwa.Share(shareOptions);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+
+
 }
