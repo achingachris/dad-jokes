@@ -35,7 +35,7 @@ export class AppComponent {
     const shareOptions = {
       title: 'Check out this joke!',
       text: this.joke,
-      url: 'https://www.linkedin.com/in/chrisachinga/',
+      url: 'https://dadjokes-phi.vercel.app/',
     };
 
     try {
