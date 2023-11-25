@@ -34,9 +34,10 @@ export class AppComponent {
   async shareJoke() {
     const shareOptions = {
       title: 'Check out this joke!',
-      text: this.joke,
+      text: `${this.joke} @WTM_Pwani #DevFestPwani #DevFest2023 #askmoringa @moringaschool @OnlyDevs_Ke`,
       url: 'https://dadjokes-phi.vercel.app/',
     };
+    
 
     try {
       await pwa.Share(shareOptions);
