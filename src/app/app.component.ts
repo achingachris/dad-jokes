@@ -9,7 +9,7 @@ import { pwa } from 'pwafire';
 })
   
 export class AppComponent {
-  joke = 'Click the Button to Generate a Joke';
+  joke = 'Make Me Laugh!';
   jokeCopied = false;
   title = 'Dad jokes';
 
